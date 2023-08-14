@@ -1,6 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:pure_code_app/home.dart';
+import 'package:pure_code_app/services.dart';
+
+import 'contact.dart';
 
 void main() => runApp(
       DevicePreview(
@@ -45,7 +49,14 @@ class PureCodeApp extends StatelessWidget {
                                 color: Color(0xFF077183),
                                 fontSize: 27,
                                 fontWeight: FontWeight.bold)),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Home(),
+                            ),
+                          );
+                        },
                       ),
                       ListTile(
                         title: Text(" About us",
@@ -61,7 +72,14 @@ class PureCodeApp extends StatelessWidget {
                                 color: Color(0xFF077183),
                                 fontSize: 27,
                                 fontWeight: FontWeight.bold)),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Services(),
+                            ),
+                          );
+                        },
                       ),
                       ListTile(
                         title: Text(" Our Projects",
@@ -69,7 +87,14 @@ class PureCodeApp extends StatelessWidget {
                                 color: Color(0xFF077183),
                                 fontSize: 27,
                                 fontWeight: FontWeight.bold)),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Works(),
+                            ),
+                          );
+                        },
                       ),
                       ListTile(
                         title: Text(" Contact us",
@@ -77,7 +102,14 @@ class PureCodeApp extends StatelessWidget {
                                 color: Color(0xFF077183),
                                 fontSize: 27,
                                 fontWeight: FontWeight.bold)),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Contact(),
+                            ),
+                          );
+                        },
                       ),
                       ListTile(
                         title: Text(" Join us",
@@ -113,6 +145,23 @@ class PureCodeApp extends StatelessWidget {
           ],
           backgroundColor: Colors.white,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Home(),
+              ),
+            );
+          },
+          backgroundColor: Color(0xFF077183),
+          splashColor: Color.fromARGB(222, 14, 5, 80),
+          foregroundColor: Color.fromARGB(255, 255, 255, 255),
+          child: Icon(
+            Icons.arrow_back,
+            size: 30,
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -132,7 +181,7 @@ class PureCodeApp extends StatelessWidget {
                 padding: const EdgeInsets.all(15.0),
                 child: const Align(
                   child: Text(
-                    'OUR WORK',
+                    'Our Projects',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.w900,

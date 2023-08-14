@@ -6,20 +6,20 @@ import 'package:device_preview/device_preview.dart';
 import 'package:pure_code_app/contact.dart';
 import 'package:pure_code_app/mobileapp.dart';
 import 'package:pure_code_app/services.dart';
-import 'package:pure_code_app/works.dart';
 import 'package:pure_code_app/thanks.dart';
+import 'package:pure_code_app/works.dart';
 
 import 'home.dart';
 
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => Mobileapp(), // Wrap your app
+        builder: (context) => Web(), // Wrap your app
       ),
     );
 
-class Mobileapp extends StatelessWidget {
-  const Mobileapp({Key? key}) : super(key: key);
+class Web extends StatelessWidget {
+  const Web({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -184,7 +184,7 @@ class PureCodeApp extends StatelessWidget {
                   // width: 360,
                   child: ClipRRect(
                     child: Image.asset(
-                      "assets/img/app2.png",
+                      "assets/img/3.png",
                       fit: BoxFit.contain,
                       width: 130,
                     ),
@@ -194,11 +194,11 @@ class PureCodeApp extends StatelessWidget {
                 padding: const EdgeInsets.all(15.0),
                 child: const Align(
                   child: Text(
-                    'mobile app',
+                    'Web Development',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
-                      fontSize: 33,
+                      fontSize: 28,
                       color: Color(0xFF077183),
                     ),
                   ),

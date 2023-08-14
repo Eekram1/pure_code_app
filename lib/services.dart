@@ -1,6 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:pure_code_app/home.dart';
+import 'package:pure_code_app/web.dart';
+import 'package:pure_code_app/works.dart';
+import 'package:pure_code_app/game.dart';
+import 'package:pure_code_app/mobileapp.dart';
+
+import 'contact.dart';
 
 void main() => runApp(
       DevicePreview(
@@ -45,7 +52,14 @@ class PureCodeApp extends StatelessWidget {
                               color: Color(0xFF077183),
                               fontSize: 27,
                               fontWeight: FontWeight.bold)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Home(),
+                          ),
+                        );
+                      },
                     ),
                     ListTile(
                       title: Text(" About us",
@@ -61,7 +75,14 @@ class PureCodeApp extends StatelessWidget {
                               color: Color(0xFF077183),
                               fontSize: 27,
                               fontWeight: FontWeight.bold)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Services(),
+                          ),
+                        );
+                      },
                     ),
                     ListTile(
                       title: Text(" Our Projects",
@@ -69,7 +90,14 @@ class PureCodeApp extends StatelessWidget {
                               color: Color(0xFF077183),
                               fontSize: 27,
                               fontWeight: FontWeight.bold)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Works(),
+                          ),
+                        );
+                      },
                     ),
                     ListTile(
                       title: Text(" Contact us",
@@ -77,7 +105,14 @@ class PureCodeApp extends StatelessWidget {
                               color: Color(0xFF077183),
                               fontSize: 27,
                               fontWeight: FontWeight.bold)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Contact(),
+                          ),
+                        );
+                      },
                     ),
                     ListTile(
                       title: Text(" Join us",
@@ -112,6 +147,23 @@ class PureCodeApp extends StatelessWidget {
               onPressed: () {}),
         ],
         backgroundColor: Colors.white,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Home(),
+            ),
+          );
+        },
+        backgroundColor: Color(0xFF077183),
+        splashColor: Color.fromARGB(222, 14, 5, 80),
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
+        child: Icon(
+          Icons.arrow_back,
+          size: 30,
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -151,7 +203,14 @@ class PureCodeApp extends StatelessWidget {
                   runSpacing: 11,
                   children: [
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Mobileapp(),
+                            ),
+                          );
+                        },
                         child: Image.asset(
                           "assets/img/app2.png",
                           fit: BoxFit.contain,
@@ -247,7 +306,14 @@ class PureCodeApp extends StatelessWidget {
                           ),
                         )),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Game(),
+                            ),
+                          );
+                        },
                         child: Image.asset(
                           "assets/img/game1.png",
                           fit: BoxFit.contain,
@@ -271,7 +337,14 @@ class PureCodeApp extends StatelessWidget {
                           ),
                         )),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Web(),
+                            ),
+                          );
+                        },
                         child: Image.asset(
                           "assets/img/3.png",
                           fit: BoxFit.contain,
